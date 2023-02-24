@@ -435,12 +435,22 @@ const r = randomSum(15);
 যখন কোনো একটা ফাংশন জাভাস্ক্রিপ্ট দেখে তখন সে প্রথমে কিছু এক্সিকিউট না করে সব পড়ে নেয়। এরপর যেখানে ফাংশন পাবে সেখানে একটা রেফারেন্স তৈরি করে নেয়, আর যেখানে var পায় সেখানে undefined বসিয়ে দেয়। উপরের ফাংশনে যখন t কে একবার test ডিক্লেয়ার করার পূর্বে কল করা হয়েছে আরেকবার পরে কল করা হয়েছে। প্রথমবার আউটপুট আসবে undefined, দ্বিতীয়বার আসবে 'something'। কারণ জাভাস্ক্রিপ্ট ফাংশন প্রথমেই test এর ভ্যালু undefined বসিয়ে দিয়েছে ক্রিয়েশনাল ফেইজে। এরপর যখন এক্সিকিউশন করতে গেছে তখন প্রথমবার সেই undefined দিয়েছে এবং পরেরবার যেহেতু এক্সিকিউট হয়ে গেছে তাই 'something' দিয়েছে। এই কনসেপ্টকে বলে hoisting। একটা ভ্যারিয়েবল আমরা ডিফাইন করা পূর্বে তার ভ্যালুর এক্সেস পাচ্ছি এটাই hoisting। আমরা যদি t ফাংশনকে এভাবে না লিখে এক্সপ্রেশন আকারে লিখি
 
 ```js
-var t = function () {
-	console.log(test);
-};
+function randomSum(max) {
+	const random1 = Math.floor(Math.random() * max);
+	const random2 = Math.floor(Math.random() * max);
+	t(); //! TypeError: t is not a function
+	var t = function () {
+		console.log(test);
+	}
+	var test = 'something';
+	t();
+	return random1 + random2;
+}
+
+const r = randomSum(15);
 ```
 
-তাহলে আমাদেরকে একটা error দিবে `TypeError: t is not a function`. কারণ তা ক্রিয়েশনাল ফেইজে var দেখার কারণে t এর ভ্যালু undefined বসিয়ে দিয়েছে। আর undefined কে তো কল করা যায় না। Point to be noted, hoisting is only applicable for var (before ES6 version), it will not work for let and const. ES6 ভার্সনে hoisting বলে কোনো টার্ম নেই। তাই আমরা ডিফাইন করার আগে যদি কল করি সেক্ষেত্রে আমাদেরকে error দিবে।
+তাহলে আমাদেরকে একটা error দিবে `TypeError: t is not a function`. কারণ তা ক্রিয়েশনাল ফেইজে var দেখার কারণে t এর ভ্যালু undefined বসিয়ে দিয়েছে। আর undefined কে তো কল করা যায় না। Point to be noted, hoisting is only applicable for var (before ES6 version), it will not work for let and const. ES6 ভার্সনে hoisting বলে কোনো টার্ম নেই। `ver` এর জায়গায় `let` অথবা `const` ব্যবহার করলে কম্পাইলার যখন কোড রিড করবে তখন সে ওই ফাংশন এর একটা রেফারেন্স তৈরি করে নিবে। আর যেহেতু এর আগের লাইন এ আমরা অল্রেডি ফাংশন কল করে দিয়েছি তাই `Cannot access 't' before initialization` এই error টা দেখাবে।
 
 ## Callback
 
