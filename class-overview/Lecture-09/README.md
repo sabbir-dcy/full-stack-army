@@ -450,7 +450,21 @@ function randomSum(max) {
 const r = randomSum(15);
 ```
 
-তাহলে আমাদেরকে একটা error দিবে `TypeError: t is not a function`. কারণ তা ক্রিয়েশনাল ফেইজে var দেখার কারণে t এর ভ্যালু undefined বসিয়ে দিয়েছে। আর undefined কে তো কল করা যায় না। Point to be noted, hoisting is only applicable for var (before ES6 version), it will not work for let and const. ES6 ভার্সনে hoisting বলে কোনো টার্ম নেই। `ver` এর জায়গায় `let` অথবা `const` ব্যবহার করলে কম্পাইলার যখন কোড রিড করবে তখন সে ওই ফাংশন এর একটা রেফারেন্স তৈরি করে নিবে। আর যেহেতু এর আগের লাইন এ আমরা অল্রেডি ফাংশন কল করে দিয়েছি তাই `Cannot access 't' before initialization` এই error টা দেখাবে।
+তাহলে আমাদেরকে একটা error দিবে `TypeError: t is not a function`. কারণ তা ক্রিয়েশনাল ফেইজে var দেখার কারণে t এর ভ্যালু undefined বসিয়ে দিয়েছে। আর undefined কে তো কল করা যায় না। Point to be noted, hoisting is only applicable for var (before ES6 version), it will not work for let and const. ES6 ভার্সনে hoisting বলে কোনো টার্ম নেই। `ver` এর জায়গায় `let` অথবা `const` ব্যবহার করলে
+```js
+function randomSum(max) {
+	const random1 = Math.floor(Math.random() * max);
+	const random2 = Math.floor(Math.random() * max);
+	t(); //! ReferenceError: Cannot access 't' before initialization
+	const t = function () {
+		console.log(test);
+	}
+	var test = 'something';
+	t();
+	return random1 + random2;
+}
+```
+কম্পাইলার যখন কোড read করবে তখন সে ওই ফাংশন এর একটা রেফারেন্স তৈরি করে নিবে। আর যেহেতু এর আগের লাইন এ আমরা অল্রেডি ফাংশন কল করে দিয়েছি, অর্থাৎ ফাংশন এর রেফারেন্স `t` তে assign হওয়ার আগেই কল করতে চাচ্ছি তাই `ReferenceError: Cannot access 't' before initialization` এই error টা দেখাবে।
 
 ## Callback
 
