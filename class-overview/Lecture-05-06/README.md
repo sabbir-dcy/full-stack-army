@@ -1235,7 +1235,7 @@ Updated [
 */
 ```
 
-কিছুই আপডেট হলো না। কারণ আমরা অবজেক্ট অ্যাসাইন করছি। আর যেহেতু অ্যাসাইন করছি সেহেতু এর রেফারেন্সও আলাদা হয়ে গেছে। আলাদা রেফারেন্সের কারণে আমার আপডেট কাজ করছে না। এবার আসি ইনডেক্স বের করে কিভাবে আপডেট করতে পারি সেটা নিয়ে।
+কিছুই আপডেট হলো না। কারণ আমরা অবজেক্ট অ্যাসাইন করছি। আর যেহেতু অ্যাসাইন করছি সেহেতু এর রেফারেন্সও আলাদা হয়ে গেছে। আলাদা রেফারেন্সের কারণে আমার আপডেট কাজ করছে না। এবার আসি ইনডেক্স বের করে কিভাবে আপডেট করতে পারি সেটা নিয়ে। jodi `updatedObj.email` ebhabe (.) operator diye `key` dhore dhore update korte chai tahole kora jabe. kintu eta kono efficient way na. ekhane 3 ta na hoy 1000 ta key holo. eto key toh mone rakha somvob na. jodi amader ke ekta raw file dewa hoy shekhetre pura file ta insert kora jabe na. sheta kibhabe `findIndex` use kore kora jaay sheta dekha jaak
 
 ```js
 const idToUpdate = 'ee729e84-a84e-4adf-b32c-4647a7114d5b';
