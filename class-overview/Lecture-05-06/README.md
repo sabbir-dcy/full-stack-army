@@ -1248,7 +1248,8 @@ let project_beta = project_alpha
 console.log(project_alpha === project_beta) // true
 ```
 
-duita project e memory address same. ekhon jodi `project_beta` te kono changes kora hoy tahole `project_alpha` o affect hobe and vice versa. `note: (.) operator use kore property dhore dhore change korle`
+duita project e memory address same. ekhon jodi `project_beta` te kono changes kora hoy tahole `project_alpha` o affect hobe and vice versa. 
+`note: (.) operator use kore`
 
 ```js
 project_beta.invest += 50;
