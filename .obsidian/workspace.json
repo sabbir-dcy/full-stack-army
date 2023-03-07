@@ -1,0 +1,156 @@
+{
+  "main": {
+    "id": "498726fa1390a64e",
+    "type": "split",
+    "children": [
+      {
+        "id": "e159e2cc923cfb49",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "741535c141b91101",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "class-overview/Lecture-05-06/README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8759e2d0793647d9",
+    "type": "split",
+    "children": [
+      {
+        "id": "1b0dd8ada82a3ef7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dbd4a20952383a2d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5644aa386f28384f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8c9f5a2ebe70ae6a",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "36dee9b4aae56a64",
+    "type": "split",
+    "children": [
+      {
+        "id": "f584fd53ff2e4cbf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d987e875b9361f4d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "class-overview/Lecture-05-06/README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "bc430fea315c4042",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "class-overview/Lecture-05-06/README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e2cc19358a117311",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "94c228871f80e1b3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "class-overview/Lecture-05-06/README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "741535c141b91101",
+  "lastOpenFiles": [
+    "resources/lecture-06/README.md",
+    "class-overview/Lecture-05-06/README.md",
+    "resources/lecture-05/README.md"
+  ]
+}
