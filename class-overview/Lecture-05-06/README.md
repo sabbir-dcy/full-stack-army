@@ -1237,41 +1237,35 @@ Updated [
 
 কিছুই আপডেট হলো না। কারণ আমরা অবজেক্ট অ্যাসাইন করছি। আর যেহেতু অ্যাসাইন করছি সেহেতু এর রেফারেন্সও আলাদা হয়ে গেছে। আলাদা রেফারেন্সের কারণে আমার আপডেট কাজ করছে না। ei bisoy tar ekta example dekhi-
 
+suppose, `project_alpha` and `project_beta` name e duita project start kora holo. dui ta tei 100 million invest kora holo. so amra likhte pari `project_beta = project_alpha`
+
 ```js
-let tesla = {
+let project_alpha = {
   invest: 100,
 };
 
-let spaceX = tesla;
-console.log(tesla === spaceX); // true
+let project_beta = project_alpha
+console.log(project_alpha === project_beta) // true
 ```
-suppose, elon musk tar ei dui company te same day te 100 million invest korlo. so amra shei hishebe bolte pari spaceX = tesla. so, investment er dik diye duitar e position same.
 
-ekhon elon musk jodi alada bhabe tesla te aro 200 million invest korte chay tahole spaceX affected hobe na.
+duita project e memory address same. ekhon jodi `project_beta` te kono changes kora hoy tahole `project_alpha` o affect hobe and vice versa. `note: (.) operator use kore property dhore dhore change korle`
 
 ```js
-tesla = {
-  invest: 200,
-};
-
-console.log(tesla);
-console.log(spaceX);
-
-console.log(tesla === spaceX); //  false
+project_beta.invest += 50;
+console.log(project_alpha === project_beta); // true
 ```
-
-ekhon jodi twitter eo sapceX er shomo poriman invest korte chay tahole-
-```js
-let twitter = spaceX
-console.log(twitter)
-```
-shey ekhon sapceX ar twitter duitay ek e shathe aro 50 million inverst korte chay tahile (.) operator use korte pare karon duitar e memory location same.
+abar, jekono ekta te jodi kono kichu re-assign kori tahole mem address change hoye jabe. `project_alpha` te 50 million add kori tahole `project_alpha` ar `project_beta` same thakbe na.
 
 ```js
-twitter.invest += 50;
+project_alpha = {
+  invest: project_alpha['invest'] + 50
+}
+
+console.log(project_alpha) // {invest: 200}
+console.log(project_alpha === project_beta); // false
 ```
 
-so, jodi `updatedObj.email` ebhabe (.) operator diye `key` dhore dhore update korte chai tahole kora jabe. kintu eta kono efficient way na. ekhane 3 ta na hoy 1000 ta key holo. eto key toh mone rakha somvob na. jodi amader ke ekta raw file dewa hoy shekhetre pura file ta insert kora jabe na. sheta kibhabe `findIndex` use kore kora jaay sheta dekha jaak
+so, jodi `updatedObj.email` ebhabe (.) operator diye `key` dhore dhore update korte chai tahole kora jabe. kintu eta kono efficient way na. ekhane 3 ta na hoye 1000 ta properties hote parto. eto properties er key toh mone rakha somvob na. jodi amader ke ekta raw file dewa hoy shekhetre pura file ta insert/re-assign kora tulana mulok easier. sheta kibhabe `findIndex` use kore kora jaay dekha jaak-
 
 ```js
 const idToUpdate = 'ee729e84-a84e-4adf-b32c-4647a7114d5b';
