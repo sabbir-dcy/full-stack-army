@@ -388,7 +388,7 @@
 ### Important Links:
 
 - [Make Fun Of Javascript Array](https://www.youtube.com/playlist?list=PL_XxuZqN0xVDr08QgQHljCecWtA4jBLnS)
-- [Class Overview](../../class-overview/Lecture-05-06/README.md)
+- [Class Overview](class-overview/Lecture-06/README.md)
 
 ### Task:
 

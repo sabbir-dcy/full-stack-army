@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e159e2cc923cfb49",
+        "id": "657b560808b4f1c2",
         "type": "tabs",
         "children": [
           {
-            "id": "741535c141b91101",
+            "id": "93eed2e98ad344f3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "class-overview/Lecture-05-06/README.md",
+                "file": "class-overview/Lecture-10/README.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "class-overview/Lecture-05-06/README.md",
+                "file": "class-overview/Lecture-10/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "class-overview/Lecture-05-06/README.md",
+                "file": "class-overview/Lecture-10/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "class-overview/Lecture-05-06/README.md"
+                "file": "class-overview/Lecture-10/README.md"
               }
             }
           }
@@ -147,10 +147,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "741535c141b91101",
+  "active": "dbd4a20952383a2d",
   "lastOpenFiles": [
+    "class-overview/Lecture-09/README.md",
+    "class-overview/Lecture-10/README.md",
+    "class-overview/Lecture-08/README.md",
+    "class-overview/Lecture-06/README.md",
+    "class-overview/Lecture-04/README.md",
+    "class-overview/Lecture-05/README.md",
     "resources/lecture-06/README.md",
-    "class-overview/Lecture-05-06/README.md",
     "resources/lecture-05/README.md"
   ]
 }

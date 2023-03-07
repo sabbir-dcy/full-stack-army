@@ -370,43 +370,68 @@ const student3 = {
 };
 
 const allStudents = [student1, student2, student3];
-
-for (let i = 0; i < allStudents.length; i++) {
-	sendEmail(allStudents[i].email);
-}
-
-function sendEmail(email) {
-	console.log('Sending email to', email);
-}
 ```
 
 আমরা প্রতিটা ছাত্রের জন্য আলাদা আলাদা অবজেক্ট তৈরি করবো। এরপর প্রতিটা অবজেক্টকে আমরা একটা অ্যারের মধ্যে স্টোর করে রাকবো। অ্যারেতে যে অবজেক্টও স্টোর করে রাখা যায় এই উদাহরণের মাধ্যমে তারও প্রমাণ আপনারা পেয়ে গেলেন। এখন আমি চাইছি সব ছাত্রকে একসাথে একই ইমেইল পাঠাবো। সেক্ষেত্রে আমাদের অ্যারের উপর লুপ চালিয়ে আমরা সহজেই উপরের কোড অনুসারে একসাথে সবাইকে ইমেইল পাঠিয়ে দিতে পারি। লুপ চালিয়ে প্রথমে আমাদের অ্যারের ইনডেক্স নাম্বার দিয়ে ঐ ডাটাকে ধরতে হবে। এরপর অবজক্টের নিয়ম অনুসারে (.) বসিয়ে এরপর প্রোপার্টি নাম দিয়ে দিলেই কাজ শেষ। অ্যারে এবং অবজেক্টের সমন্বয়ে আমরা প্রোগ্রামকে কিভাবে ডায়নামিক করতে পারি তার ছোট একটি উদাহরণ আপনারা দেখলেন। আপনি যতো বড় অ্যাপ্লিকেশনই বানান ঘুরেফিরে এই কাজটাই করবেন।
 
+javascript er object ke arektu bhalo bhabe bujha jabe jodi etake java or c# er shathe compare kora jaay. java te amra object create korte pari ekta `class` theke. and `new` keyword use kore object literal define korte pari. niche c# code er example dewa holo. which is just basically a curbon copy of java. 😂
+
+```c#
+class Student { // blue print
+  String name;
+  int age;
+
+  public Student(String name, int age) { // constructor
+    this.name = name;
+    this.age = age;
+  }
+
+  public void doSomething() { // method
+    Console.WriteLine(name + " doing something");
+  }
+}
+
+Student student = new Student("john doe", 20);
+student.doSomething() // -> john doe doing something
+```
+
+ei similar object ta javascript e lekha jaay ebhabe-
+```js
+const student = {
+  name: 'jack marston',
+  age: 20,
+  doSomething: function() {
+    console.log(this.name, 'doing something')
+  }
+}
+
+student.doSomething()
+```
+
+```
 ## Functions
 
 ফাংশন আমরা বানাই অনেকটা লুপের মতো কাজ করার জন্য। লুপ আমরা ব্যবহার করি একই কাজ বারবার করার জন্য। ফাংশনও আমরা ব্যবহার করবো একই কাজ বারবার করার জন্য। তাহলে লুপ থাকতে কেন আমরা ফাংশন ব্যবহার করবো?
 
 ফাংশন আমরা বিভিন্ন জায়গায় আমাদের মতো করে ব্যবহার করতে পারবো। আমি আমার মতো করে ফাংশনকে কল করতে পারবো। ফাংশনকে আমরা রিইউজ করতে পারি, কারণ ফাংশনের একটা নাম আছে। কিন্তু লুপের কোনো নাম নেই। সুতরাং লুপকে চাইলে আমি যেখানে সেখানে ইউজ করতে পারবো না। আবার লুপ চালু হলে তাকে আমার হয় ব্রেক করে দিতে হবে, নাহয় লুপ শেষ না হওয়া পর্যন্ত চলতে দিতে হবে। লুপের উপর আমাদের কন্ট্রোল নাই। কিন্তু ফাংশনকে আমরা বিভিন্ন জায়গায় আমাদের প্রয়োজন অনুসারে ব্যবহার করতে পারবো। আমাদের প্রয়োজন অনুসারে কন্ট্রোল করতে পারবো। আগের উদাহরণ থেকে যদি আমি কয়েকটা লাইন নিই
 
-```js
+
 for (let i = 0; i < allStudents.length; i++) {
-	// sendEmail(allStudents[i].email);
-	console.log('Sending email to', allStudents[i].email);
+ sendEmail(allStudents[i].email);
+ console.log('Sending email to', allStudents[i].email);
 }
 
-// function sendEmail(email) {
-// 	console.log('Sending email to', email);
-// }
-```
+function sendEmail(email) {
+  console.log('Sending email to', email);
+}
 
 আমরা ফাংশন না লিখেও সেইম কাজ করতে পারতাম। কিন্তু লুপের ভিতরের লাইনটা লুপের বাইরে অন্য কোথাও কাজ করবে না। কিন্তু ফাংশন যেকোনো জায়গায় কল করা যাবে। আবার ধরেন আমার অন্য জায়গায় দরকার পুরো নাম সেটা কি আবার সেই লুপ চালিয়ে করবো। না, আমরা ফাংশন দিয়ে করবো। এক্ষেত্রে আমরা একটা বিল্ড ইন ফাংশন ব্যবহার করে দেখি।
 
-```js
+
 allStudents.forEach((item) => console.log('Email ', item.email));
 allStudents.forEach((item) =>
 	console.log('Full Name ', item.firstName, item.secondName)
 );
-```
 
 এক্ষেত্রে আমরা বারবার লুপ না চালিয়ে `forEach` ফাংশনটা ব্যবহার করলাম। ফাংশনের সবচেয়ে বড় সুবিধা এটাকে মাল্টিপল টাইম ব্যবহার করা যায় যেকোনো জায়গায়।
 
@@ -497,6 +522,95 @@ console.log(generateRandomNumber(85, 100));
 
 তাহলে বুঝুন ফাংশন আমাদের কাজকে কতটা সহজ করে দেয়।
 
+ekhon emon ekta example jodi chinta kori jekhane amader back to back 2 ta loop proyojon tokhon amra chaile ekta function er moddhe ekta loop e niye oi function ta ke 2 bar othoba jotobar iccha call korte pari
+```js
+function myLoop(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+  }
+}
+
+let arr1 = [1, 2, 3, 4, 5];
+let arr2 = ["a", "b", "c", "d", "e", "f"];
+
+myLoop(arr1); 
+myLoop(arr2);
+```
+
+uporer code tay loop er bhitorer operation kintu amra ekbar e define kore diyechi. jotobar e `myLoop` function ta call hobe totobari `argument` e jei array dewa hoyeche tar item gula eke eke print korbe. But, amra jodi chai je, loop er bhitorer operation pre-defined thakbe na. tahole bhinno dhoroner operation perform korar jonne alda ekta function create korte pari.
+```js
+const arr = [10, 11, 12, 13, 14, 15, 16]
+
+function customLoop(arr, callBack) {
+  for (let i = 0; i < arr.length; i++) {
+    callBack(arr[i]);
+  }
+}
+
+function callBack(item) {
+  console.log(item * 2);
+}
+
+customLoop(arr, callBack);
+```
+
+ekhane `callBack` function dara amra item gulake 2 diye multiply kore print korchi. tar mane ekhane different operation perform kora hocche. ei `callBack` function ke amra `customLoop` function er parameter e argument hishebe pass kore dicchi. then ei `callBack` ta `customLoop` function er bhitor `for` loop er moddhe call hocche. ar eta call howar somoy parameter e argument hishebe array er element gula pass kora hocche. ei callback function ke generally aladabhabe na likhe shorasori parameter er bhitorei likha jaay -
+
+```js
+const arr = [10, 11, 12, 13, 14, 15, 16]
+
+function customLoop(arr, callBack) {
+  for (let i = 0; i < arr.length; i++) {
+    callBack(arr[i]);
+  }
+}
+
+customLoop(arr, function (item) {
+  if (item % 2 == 0) {
+    console.log(item);
+  }
+});
+
+// arrow function and cool syntax use koreo likha jaay
+customLoop(arr, (item) => {
+  item % 2 == 0 && console.log(item)
+})
+```
+
+ekhane koyekta interger er ekta array and ekta callback function pass korchi. and function tar moddhe shudhu even integer gulai print hobar operation define kore diyechi.
+similar statement ta js er built in method diyeo kora jaay. jemon `forEach` method use kore -
+
+```js
+const arr = [10, 11, 12, 13, 14, 15, 16]
+arr.forEach((item) => item % 2 == 0 && console.log(item))
+```
+
+for each ke amra function bolchi na. instead etake `method` bolchi. karon ekta function ke method tokhon e bolbo jokhon sheta kono object ke belong kore. `forEach` function ta js er `array` object ke belong kore. ekta example diye bisoy ta bujha jaak -
+```js
+function doSomething() {
+  console.log('a random function')
+}
+
+const student = {
+  name: 'jack',
+  age: 20,
+  doSomething: function() {
+    console.log('a random function')
+  }
+}
+student.doSomething()
+```
+uporer code tay prothom `doSomething` holo function. ar sudent object er bhitorer `doSomething` ke function na bole `method` bolbo. etake key value hishebe na likhe direct value hishebe lekha jaay. for example -
+```js
+const obj = {
+  name: 'john doe',
+  myFunc() {
+    console.log(this.name)
+  }
+}
+obj.myFunc()
+```
+
 ## Expression vs Statement
 
 এই বিষয় বুঝার আগে আমরা একটু কিছু উদাহরণ দেখি
@@ -504,9 +618,6 @@ console.log(generateRandomNumber(85, 100));
 ```js
 const name1 = 'Rayhan'; // Statement
 const name2 = 'Alvi'; // Statement
-const name3 = 'Anik'; // Statement
-const name4 = 'Arjun'; // Statement
-const name5 = 'Ayman'; // Statement
 
 const students = [
 	'Rayhan',
@@ -520,9 +631,6 @@ const students = [
 
 console.log(students[0]); // Expression
 console.log(students[1]); // Expression
-console.log(students[2]); // Expression
-console.log(students[3]); // Expression
-console.log(students[4]); // Expression
 
 for (let i = 0; i < students.length; i++) {
 	console.log(students[i], students[i].toLowerCase()); // Expression
@@ -530,19 +638,8 @@ for (let i = 0; i < students.length; i++) {
 
 name1.sendEmail(); // Expression
 name2.sendEmail(); // Expression
-name3.sendEmail(); // Expression
-name4.sendEmail(); // Expression
-name5.sendEmail(); // Expression
 
 const nums = [1, 2, 3, 4, 5, 6]; // Statement
-const bools = [true, true, false, false]; // Statement
-const nulls = [null, null, null]; // Statement
-const undefineds = [undefined, undefined, undefined]; // Statement
-const arrayOfArray = [
-	[1, 2, 3],
-	[4, 5, 6],
-	[7, 8, 9],
-]; // Statement
 const mixed = [true, null, 'Str', 5, [12, 2, 4]]; // Statement
 
 const student1 = {
@@ -606,6 +703,25 @@ console.log(generateRandomNumber(5, 10)); // Expression
 
 Expression and Statement এর মধ্যে বেসিক যে পার্থক্য সেটা হলো এক্সপ্রেশন দিন শেষে কিছু না কিছু রিটার্ন করে, ডাটা প্রোডিউস করে, এবং একে কোনো এক জায়গায় স্টোর করে রাখা যায়। সেই হিসেবে ফাংশন কল এক ধরণের এক্সপ্রেশন। আর স্টেটমেন্ট কোনো ডাটা প্রোডিউস করেনা, কোথাও স্টোর করে রাখা যায় না, কিছু রিটার্ন করে না। ফাংশন লেখা হচ্ছে স্টেটমেন্ট, আর ফাংশন কল হচ্ছে এক্সপ্রেশন। কারণ ফাংশন লিখলে তা কিছু রিটার্ন করে না যতক্ষণ পর্যন্ত কল করা না হচ্ছে। আবার যদি অ্যারো ফাংশন লেখা হয় সেটা এক্সপ্রেশন কারণ সেটাকে একটা ভ্যারিয়েবলে স্টোর করে রাখা হচ্ছে।
 
+### function expression
+```js
+function myFunc() {}
+```
+eta function statement er ekta example. jodi etake expression akare likhte chai tahole function ta kono ekta variable e assign korte hobe.
+```js
+const myFunc = function () {};
+```
+es6 er syntax use kore-
+
+```js
+const myFunc = () => {};
+```
+ekhane, 1st way ke function `declaration` or `statement` bole. ar 2nd way ke bole function `expression`. ei bisoy ta hoisting er shathe jorito. ja next kono ek lecture e alochona kora hobe.
+
+function declaration vs expression somporke details e bujhte chaile ei link ta recommended. [function statement vs expression](https://www.geeksforgeeks.org/difference-between-function-declaration-and-function-expression-in-javascript/)
+
+javascript er statement vs expression bhujhte ei video [statement vs expression in js](https://www.youtube.com/watch?v=WVyCrI1cHi8)
+
 ## কোথায় অ্যারে ব্যবহার করবো আর কোথায় অবজেক্ট?
 
 যে টার্মগুলো Singular সেখানে আমরা ব্যবহার করবো অবজেক্ট। যেখানে Plural সেখানে আমরা ব্যবহার করবো অ্যারে। যেমন একটা ফোন - অবজেক্ট, অনেকগুলো ফোন - অ্যারে, person - object, people - array, member - object, members - array। যেখানে একজন বা একটা কিছুর ইনফরমেশন সেখানে অবজেক্ট। যেখানে একের অধিক লোক বা একের অধিক অবজেক্ট বা বস্তু আসবে সেখানেই আমরা অ্যারে ব্যবহার করবো। জাস্ট এই কথাটা মাথায় রাখবেন। জীবনে আর অ্যারে আর অবজেক্ট নিয়ে গুলিয়ে ফেলবেন না।
@@ -616,11 +732,3 @@ Expression and Statement এর মধ্যে বেসিক যে পার
 - Objects
 - Functions and Functional Programming
 - Basic OOP
-
-## Resource for this lecture
-
-এই লেকচারের সমস্ত রিসোর্স এই [লিংক](../../resources/lecture-04/README.md) এ পাবেন।
-
-## AUTHOR
-
-[Aditya Chakraborty](https://github.com/adityackr)

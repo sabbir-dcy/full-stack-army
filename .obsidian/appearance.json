@@ -1,5 +1,6 @@
 {
-  "accentColor": "",
-  "baseFontSize": 16,
-  "theme": "obsidian"
+  "accentColor": "#efb26b",
+  "baseFontSize": 18,
+  "theme": "obsidian",
+  "monospaceFontFamily": "JetBrains Mono"
 }

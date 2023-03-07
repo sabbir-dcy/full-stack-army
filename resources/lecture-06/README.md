@@ -423,7 +423,7 @@ console.log(result);
 ### Important Links
 
 - [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
-- [Class Overview](../../class-overview/Lecture-05-06/README.md)
+- [Class Overview](class-overview/Lecture-06/README.md)
 
 ### Task
 
