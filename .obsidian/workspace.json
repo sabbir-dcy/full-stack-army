@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "36dee9b4aae56a64",
@@ -147,16 +146,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dbd4a20952383a2d",
+  "active": "93eed2e98ad344f3",
   "lastOpenFiles": [
     "class-overview/Lecture-10/README.md",
-    "class-overview/Lecture-11/README.md",
-    "Untitled.md",
     "class-overview/Lecture-09/README.md",
     "class-overview/Lecture-08/README.md",
+    "class-overview/Lecture-07/README.md",
     "class-overview/Lecture-06/README.md",
-    "class-overview/Lecture-04/README.md",
     "class-overview/Lecture-05/README.md",
+    "class-overview/Lecture-04/README.md",
+    "class-overview/Lecture-03/README.md",
+    "class-overview/Lecture-02/README.md",
+    "class-overview/Lecture-01/README.md",
+    "class-overview/Lecture-11/README.md",
+    "Untitled.md",
     "resources/lecture-06/README.md",
     "resources/lecture-05/README.md"
   ]
