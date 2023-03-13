@@ -391,15 +391,3 @@ We need an attendance system. Students can create their own profile. Admin can s
 Student can see their own time logs and attend button when enable.
 
 এর পরের ক্লাস থেকে আমরা একজন ডেভেলপার কিভাবে কোনো প্রজেক্ট শুরু করবো সেগুলো ধাপে ধাপে দেখবো।
-
-## Resource for this lecture
-
-এই লেকচারের সমস্ত রিসোর্স [লেকচার ১১](../../resources/lecture-11/README.md) এ পাবেন।
-
-## Source Code
-
-এই লেকচারের সমস্ত সোর্স কোড এই [লিংকে](../../src/lecture-11/app.js) এ পাবেন।
-
-## AUTHOR
-
-[Aditya Chakraborty](https://github.com/adityackr)

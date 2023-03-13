@@ -176,7 +176,7 @@ function get(path, callback) {
     .then((data) => callback(data));
 }
 function getUserData(userName, url) {
-  get(`${url}/users?useName=${userName}`, (user) => {
+  get(`${url}/users?userName=${userName}`, (user) => {
     get(`${url}/posts?userId=${user[0].id}`, (post) => {
       get(`${url}/comments?postId=${post[0].id}`, (comments) => {
         console.log(comments);

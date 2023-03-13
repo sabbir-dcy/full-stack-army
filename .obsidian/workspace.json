@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "class-overview/Lecture-10/README.md",
+                "file": "class-overview/Lecture-11/README.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "class-overview/Lecture-10/README.md",
+                "file": "class-overview/Lecture-11/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "class-overview/Lecture-10/README.md",
+                "file": "class-overview/Lecture-11/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "class-overview/Lecture-10/README.md"
+                "file": "class-overview/Lecture-11/README.md"
               }
             }
           }
@@ -149,8 +149,10 @@
   },
   "active": "dbd4a20952383a2d",
   "lastOpenFiles": [
-    "class-overview/Lecture-09/README.md",
     "class-overview/Lecture-10/README.md",
+    "class-overview/Lecture-11/README.md",
+    "Untitled.md",
+    "class-overview/Lecture-09/README.md",
     "class-overview/Lecture-08/README.md",
     "class-overview/Lecture-06/README.md",
     "class-overview/Lecture-04/README.md",
