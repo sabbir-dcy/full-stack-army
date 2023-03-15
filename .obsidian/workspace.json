@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "class-overview/Lecture-11/README.md",
+                "file": "class-overview/Lecture-06/README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "class-overview/Lecture-11/README.md",
+                "file": "class-overview/Lecture-06/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "class-overview/Lecture-11/README.md",
+                "file": "class-overview/Lecture-06/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "class-overview/Lecture-11/README.md"
+                "file": "class-overview/Lecture-06/README.md"
               }
             }
           }
@@ -148,17 +148,18 @@
   },
   "active": "93eed2e98ad344f3",
   "lastOpenFiles": [
-    "class-overview/Lecture-10/README.md",
-    "class-overview/Lecture-09/README.md",
-    "class-overview/Lecture-08/README.md",
-    "class-overview/Lecture-07/README.md",
-    "class-overview/Lecture-06/README.md",
     "class-overview/Lecture-05/README.md",
     "class-overview/Lecture-04/README.md",
     "class-overview/Lecture-03/README.md",
-    "class-overview/Lecture-02/README.md",
+    "class-overview/Lecture-03/Programming Language Landscape.png",
     "class-overview/Lecture-01/README.md",
+    "class-overview/Lecture-09/README.md",
+    "class-overview/Lecture-08/README.md",
+    "class-overview/Lecture-02/README.md",
     "class-overview/Lecture-11/README.md",
+    "class-overview/Lecture-10/README.md",
+    "class-overview/Lecture-07/README.md",
+    "class-overview/Lecture-06/README.md",
     "Untitled.md",
     "resources/lecture-06/README.md",
     "resources/lecture-05/README.md"
